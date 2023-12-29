@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Image Card</title>
+    <link rel="stylesheet" href="css/style.image.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="card"
+        onclick="showOverlay('/img/oke.png', 'Luo yi', 'Luo Yi Anda GG Cuy. Bisa membunuh lawan dalam satu kali combo. Apakah anda ingin menikah dengan Luo yi?')"
+      >
+        <img src="img/luo_yi_epic.png" alt="png" />
+        <div class="card-content">
+          <h2>&#129316&#129397&#128523</h2>
+        </div>
+      </div>
+      <div
+        class="card"
+        onclick="showOverlay('/img/oke2.png', 'Silvanna', 'Silvanna hero culik yang bagus, apalagi digunakan full damage. Tapi, sayangnya hero tersebut saat ini tidak kuat seperti hero exp lainnya seperti Arlot.')"
+      >
+        <img src="/img/baby.png" alt="png" />
+        <div class="card-content">
+          <h2>&#129398;&#10052;</h2>
+        </div>
+      </div>
+      <div
+        class="card"
+        onclick="showOverlay('/img/wkwk.png', 'Teman', 'Silaturahmi teman seangkatan. Berkumpul di asrama yang penuh dengan kenangan ')"
+      >
+        <img src="/img/wkwk.png" alt="png" />
+        <div class="card-content">
+          <h2>&#129309;</h2>
+        </div>
+      </div>
+      <div class="card" 
+      onclick="showOverlay('img/wkwk2.png', 'Teman', 'Seperti biasa nongkrong tidak akan seperti biasanya lagi. Konyol, gila dan cerita-cerita aneh mungkin akan menjadi pengingat saat berkumpul nanti. Semoga semuanya sukses bro')"
+      >
+        <img src="img/wkwk2.png" alt="png" />
+        <div class="card-content">
+          <h2>&#9749;</h2>
+        </div>
+      </div>
+      <div class="card" 
+      onclick="showOverlay('img/wkwk5.png', 'Teman', 'Gunakan istirahat anda dengan push mobile legends. Game yang sangat ramah, bahkan anda bisa didoakan oleh tim sendiri')">
+        <img src="img/wkwk3.png" alt="png" />
+        <div class="card-content ovr">
+          <h2>&#127918;</h2>
+        </div>
+        </div>
+      <div class="card" 
+      onclick="showOverlay('img/wkwk4.png', 'Teman', 'Selamat Ulang Tahun Cuy. Panjang umur jadikan pelajaran hidup yang kemarin-kemarin seperti sholat dan lain-lain. Have a great day ')">
+        <img src="img/wkwk4.png" alt="png" />
+        <div class="card-content ovr">
+          <h2>🎂🎈</h2>
+        </div>
+      </div>
+    </div>
+    <div class="overlay" id="overlay">
+      <img src="" alt="Overlay Image" id="overlayImage" />
+      <p class="overlay-text" id="overlayText">
+        Additional Information About Cats
+      </p>
+      <button class="btn close" onclick="hideOverlay()">X Close</button>
+    </div>
+    <script>
+      function showOverlay(imageSrc, altText, overlayText) {
+        document.getElementById("overlayImage").src = imageSrc;
+        document.getElementById("overlayImage").alt = altText;
+        document.getElementById("overlayText").innerText = overlayText;
+        document.getElementById("overlay").style.display = "flex";
+      }
+
+      function hideOverlay() {
+        document.getElementById("overlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
